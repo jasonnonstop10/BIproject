@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/5d2a17d9-be55-430b-880a-7fb8ff6c48da/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/BIpython",
+  "appService.deploySubpath": "."
+}
