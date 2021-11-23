@@ -18,3 +18,9 @@ async def root():
 async def stock_detall():
 
     return sd.get_stock(stock)
+
+
+@app.get("/stock/detall/{stock_name}")
+async def stock_detall(stock_name: str):
+    stock_name = stock_name.upper()
+    return sd.get_stockname(stock_name)
