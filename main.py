@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import stock_detall as sd
+import stock_statics as ss
 
 
 app = FastAPI()
@@ -24,3 +25,13 @@ async def stock_detall():
 async def stock_detall(stock_name: str):
     stock_name = stock_name.upper()
     return sd.get_stockname(stock_name)
+
+
+@app.get("/stock/statics")
+async def stock_statics():
+    return ss.get_statics()
+
+
+@ app.get("/stock/statics/{stock_name}")
+async def stock_statics(stock_name: str):
+    return ss.get_staticsfindone(stock_name)
